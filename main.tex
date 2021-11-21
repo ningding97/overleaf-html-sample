@@ -1,7 +1,7 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 
-\title{Create HTML output using GitHub Actions}
+\title{A Test of Open Book}
 \author{Michal Hoftich}
 \date{January 2020, updated June 2021}
 \usepackage{hyperref}
@@ -18,34 +18,13 @@
 
 \section{Introduction}
 
-\urllink{Overleaf}{https://www.overleaf.com/} is popular online \LaTeX{}
-editor. It can generate PDF files 
-without need to install a local \TeX{} distribution. Unfortunatelly, it doesn't
-support conversion to HTML out of the box. To get the HTML version of the
-document, we must use some tricks.
+This is a test of the Latex2html tool.
 
-There are many tools that support the conversion from \LaTeX{} to HTML, each of
-them use a different approach. I am a developer of
-\urllink{\TeX4ht}{https://tug.org/tex4ht/}, so I will present solution that
-uses this tool. 
+\section{Prompt}
 
-\TeX4ht uses \TeX{} for the actual conversion. It loads special configuration
-files for internal \LaTeX{} code or for the used packages. These configuration
-files patch commands with special instructions that insert HTML (or other
-supported formats). Because it uses \TeX{} for the actual conversion, it
-supports custom commands. It also supports font changing commands, so  it
-doesn't need custom configurations in many cases.
+What is prompt-learning?
 
-The first method that use \TeX4ht for the conversion was presented by LianTze
-Lim. It uses a custom build file for
-\urllink{Latexmk}{https://www.overleaf.com/latex/examples/testing-html-export-with-tex4ht/rqcknjvwyyry} 
-that calls \TeX4ht. The downside is that the generated HTML file is not easilly accessible.  
 
-To make the conversion easier, I've set up \urllink{Docker image}{https://hub.docker.com/repository/docker/michalh21/make4ht-docker/general} for \TeX4ht. 
-Thanks to \urllink{GitHub Actions}{https://help.github.com/en/actions/automating-your-workflow-with-github-actions/about-github-actions}, 
-it is possible to use this image for the conversion of the Overleaf document to HTML. 
-The generated files can be published on the web using Github Pages, where they can be automatically 
-updated on every document change. This document is an example of this setup.
 
 \section{Setup}
 
