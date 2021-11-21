@@ -15,40 +15,6 @@
 \usepackage{color, soul}
 \usepackage{listings} % python code
 
-\usepackage{tcolorbox}
-\usepackage{cleveref}
-\usepackage[hang,flushmargin]{footmisc}
-\crefname{section}{§}{§§}
-\Crefname{section}{§}{§§}
-
-
-\definecolor{codegreen}{rgb}{0,0.6,0}
-\definecolor{codegray}{rgb}{0.5,0.5,0.5}
-\definecolor{codepurple}{rgb}{0.58,0,0.82}
-%\definecolor{backcolour}{RGB}{233,252,252}
-%\definecolor{backcolour}{RGB}{255, 252, 243}
-\definecolor{backcolour}{RGB}{252, 253, 246}
-
-\lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple},
-    basicstyle=\ttfamily\footnotesize,
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
-    showstringspaces=false,
-    showtabs=false,                  
-    tabsize=2
-}
-
-\lstset{style=mystyle}
 
 \begin{document}
 
@@ -63,29 +29,7 @@ This is a test of the Latex2html tool.
 What is prompt-learning?
 
 
-\begin{figure*}[!thp]
-\centering
-\begin{minipage}{0.999\linewidth}
-\begin{lstlisting}[language=Python]
-# Example A. Hard prompt for topic classification
-a {"mask"} news: {"meta": "title"} {"meta": "description"}
-
-# Example B. Hard prompt for entity typing
-{"meta": "sentence"}. In this sentence, {"meta": "entity"} is a {"mask"},
-
-# Example C. Soft prompt (initialized by textual tokens)
-{"meta": "premise"} {"meta": "hypothesis"} {"soft": "Does the first sentence entails the second ?"} {"mask"} {"soft"}.
-
-
-\end{lstlisting}
-\end{minipage} 
-\caption{ Some examples of our template language. In our template language, we can use the key ``meta'' to refer the original input text (Example B), parts of the original input (Example A, C, G), or other key information. We can also freely specify which tokens are hard and which are soft (and their initialization strategy). We could assign an id for a soft token to specify which tokens are sharing embeddings (Example F). OpenPrompt also supports the post processing (Example E) for each token, e.g., lambda expression or MLP.
-}
-
-\label{fig:code_template} 
-\end{figure*}
-
-
-
+\subsection{Other test}
+blablabla
 
 \end{document}
